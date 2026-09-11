@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Hero Section</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Video */
+        .hero video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        /* Dark Overlay */
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+            z-index: -1;
+        }
+
+        /* Navbar */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 60px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Hero Content */
+        .content{
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo{
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content h2{
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .content p{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .buttons{
+            display: flex;
+            gap: 20px;
+        }
+
+        .buttons img{
+            width: 170px;
+            border-radius: 8px;
+        }
+
+        .scroll{
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+
+        <!-- Background Video -->
+        <video autoplay muted loop>
+            <source src="https://b.zmtcdn.com/data/file_assets/2627bbed9d6c068e50d2aadcca11ddbb1743095810.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Navbar -->
+        <nav>
+            <h2>zomato</h2>
+
+            <ul>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Add Restaurant</a></li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#">Sign up</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="content">
+            <div class="logo">zomato</div>
+
+            <h2>India's #1 <br> food delivery app</h2>
+
+            <p>Experience fast & easy online ordering on the Zomato app</p>
+
+            <div class="buttons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="">
+                
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="">
+            </div>
+        </div>
+
+        <div class="scroll">
+            Scroll Down ↓
+        </div>
+
+    </section>
+
+</body>
+</html>
